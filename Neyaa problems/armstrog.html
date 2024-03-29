@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter a number:</h3>
+    <input type="text" id="num">
+    <h3 id="h"></h3>
+    <button onclick="armstrong()">submit</button>
+    <script>
+        function power(base,power1)
+        {
+            let prod=1
+            for(i=1;i<=power1;i++)
+            {
+                prod=base*prod
+            }
+            return prod
+        }
+        function armstrong()
+        {
+            let num = document.getElementById("num").value
+            let h = document.getElementById("h")
+            let num1=num
+            let num2=num
+            let count=0
+            let sum=0
+            while(num1!=0)
+            {
+                num/=10
+                count++
+            }
+            while(num2!=0)
+            {
+                let val=num2%10
+                sum=sum+power(val,count)
+                num2/=10
+            }
+            
+            if(num==sum)
+            {
+                h.innerHTML="it is an armstrong number"
+                console.log("hjbhjb")
+            }
+            else
+            {
+                h.innerHTML="it is not an armstrong number"
+                console.log("gfcgh")
+            }
+
+        }
+    </script>
+</body>
+</html>

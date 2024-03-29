@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter a value in celsius:</h3>
+    <input type="text" name="" id="cel">
+    <h3 id="h"></h3>
+    <button onclick="cal()">calculate</button>
+    <script>
+        function cal()
+        {
+            let cel = document.getElementById("cel").value
+            let faren = cel*(9/5)+32
+            let h = document.getElementById("h")
+            h.innerHTML=`The fahrenheit value of a given celsius is :${faren}`    
+        } 
+    </script>
+</body>
+</html>

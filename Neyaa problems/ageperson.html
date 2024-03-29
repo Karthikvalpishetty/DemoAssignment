@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" name="" id="date">
+    <h3 id="h"></h3>
+    <button onclick="cal()">Submit</button>
+    <script>
+       function cal()
+       {
+        let date = new Date()
+        let date1=date.getDate()
+        let mon1=date.getMonth()
+        let year1=date.getFullYear()
+        
+        let date2 = new Date(document.getElementById("date").value)
+        let bod = date2.getDate()
+        let bom = date2.getMonth()
+        let boy = date2.getFullYear()
+
+        let h = document.getElementById("h")
+        if(date1>=bod || (date1>=bod && mon1>=bom))
+        {
+            h.innerHTML=`Age of a given person is :${year1-boy}`
+        }
+        else{
+            h.innerHTML=`Age of a given person is :${(year1-1)-boy}`
+        }
+       }
+    </script>
+</body>
+</html>

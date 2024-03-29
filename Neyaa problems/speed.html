@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter total distance covered by vehicle:</h3>
+    <input type="text" id="dist">
+    <h3>Enter the time taken to cover total distance in hour:</h3>
+    <input type="text" id="time">
+    <h3 id="h"></h3>
+    <button onclick="cal()">calculate</button>
+    <script>
+       let cal=()=>{
+        let dist = document.getElementById("dist").value
+        let time = document.getElementById("time").value
+        let speed = dist/time
+        let h= document.getElementById("h")
+        h.innerHTML=`${speed}`
+    }
+    </script>
+</body>
+</html>

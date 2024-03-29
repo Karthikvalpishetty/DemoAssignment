@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter the first side value:</h3>
+    <input type="text" id="first">
+    <h3>Enter the second side value:</h3>
+    <input type="text" id="second">
+    <h3>Enter the third side value:</h3>
+    <input type="text" id="third">
+    <h3 id="h"></h3>
+    <button onclick="cal()">submit</button>
+    <script>
+        function cal()
+        {
+            let first=document.getElementById("first").value
+            let second=document.getElementById("second").value
+            let third=document.getElementById("third").value
+            let h=document.getElementById("h")
+            let perimeter = parseInt(first)+Number(second)+Number(third)
+            h.innerHTML=`Perimeter of a given triangle is ${perimeter}`
+        }
+    </script>
+</body>
+</html>

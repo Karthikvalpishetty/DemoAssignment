@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter rock(or)paper(or)Scissors:</h3>
+    <input type="text" name="" id="inp1">
+    <h3>Enter rock(or)paper(or)Scissors:</h3>
+    <input type="text" name="" id="inp2">
+    <h3 id="h"></h3>
+    <button onclick="game()">submit</button>
+    <script>
+        function game()
+        {
+            let inp1 = document.getElementById("inp1").value
+            let inp2 = document.getElementById("inp2").value
+            let h = document.getElementById("h")
+            if(inp1==inp2)
+            {
+                h.innerHTML=`it is a tie`
+            }
+            else if((inp1=="rock"&&inp2=="Scissors"||
+                    inp1=="paper"&&inp2=="rock"||
+                    inp1=="Scissors"&&inp2=="rock"))
+            {
+                h.innerHTML="user1 wins"
+            }
+            else
+            {
+                h.innerHTML="user2 wins"
+            }    
+        }
+    </script>
+</body>
+</html>

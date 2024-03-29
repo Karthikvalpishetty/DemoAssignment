@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter a number:</h3>
+    <input type="text" id="num">
+    <h3 id="h"></h3>
+    <button onclick="cal()">submit</button>
+    <script>
+        function cal()
+        {
+            let num = document.getElementById("num").value
+        let h = document.getElementById("h")
+        if(num<0)
+        {
+            h.innerHTML=`Given number is lesser than zero`
+        }
+       else if(num>0) 
+        {
+            h.innerHTML=`Given number is greater than zero`
+        } 
+        else
+        {
+            h.innerHTML=`Given number is equal to zero`
+        }
+        }
+
+        
+    </script>
+</body>
+</html>

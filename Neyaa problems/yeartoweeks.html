@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter how many years needed to convert into weeks:</h3>
+    <input type="text" id="year"><br>
+    <h3 id="h"></h3>
+    <button onclick="cal()">calculate</button>
+    <script>
+        function cal()
+        {
+            let year = document.getElementById("year").value
+            let days = year*365
+            let weeks = parseInt(days/7)
+            let h = document.getElementById("h")
+            h.innerHTML=`${weeks}`
+        }
+    </script>
+</body>
+</html>

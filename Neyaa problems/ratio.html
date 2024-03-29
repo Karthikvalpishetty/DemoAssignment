@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter a value:</h3>
+    <input type="text" id="val1">
+    <h3>Enter a value:</h3>
+    <input type="text" id="val2">
+    <h3 id="h"></h3>
+    <button onclick="cal()">Calculate</button>
+    <script>
+        function cal()
+        {
+            let val1=document.getElementById("val1").value
+            let val2=document.getElementById("val2").value
+            for(num=val1;num>1;num--)
+            {
+                if((val1%num)==0 && (val2%num)==0)
+                {
+                    val1=val1/num;
+                    val2=val2/num;
+                }
+            }
+            let h = document.getElementById("h")
+            h.innerHTML=`The ratio of given two numbers is :${val1}:${val2}`
+        }
+    </script>
+</body>
+</html>

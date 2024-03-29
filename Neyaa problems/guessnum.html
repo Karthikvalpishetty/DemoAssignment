@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter a number between 0-9:</h3>
+    <input type="text" id="inp">
+    <h3 id="h"></h3>
+    <button onclick="guess()">guess</button>
+    <script>
+        function guess()
+        {
+            let num=parseInt(Math.random()*10)
+            console.log(num)
+            let inp = document.getElementById("inp").value
+            let h = document.getElementById("h")
+            if(num==inp)
+            {
+                h.innerHTML="you guessed exactly same number"
+            }
+            else if(num>inp)
+            {
+                h.innerHTML="you guessed lower value"
+            }
+            else
+            {
+                h.innerHTML="you guessed upper value"
+            }
+        }
+    </script>
+</body>
+</html>

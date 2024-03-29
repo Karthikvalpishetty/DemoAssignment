@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrome(nam)
+        {
+            let name1= nam.toLowerCase()
+            let j = name1.length-1;
+            let i=0
+            while(i<j)
+            {
+                if(name1.charAt(i)!=name1.charAt(j))
+                {
+                    return false
+                }
+                i++
+                j--
+            }
+            return true
+        }
+        
+        function name()
+        {
+            if(palindrome("madam")){
+                console.log("given word is palindrome")
+            }
+            else
+            {
+                console.log("not a palindrome")
+            }
+        }
+        name()
+    </script>
+</body>
+</html>

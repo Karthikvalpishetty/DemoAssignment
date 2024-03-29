@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter your name:</h3>
+    <input type="text" id="nam">
+    <h3>Enter your age:</h3>
+    <input type="text" id="age">
+    <h3 id="h"></h3>
+    <button onclick="cal()">submit</button>
+    <script>
+        function cal()
+        {
+            let name1 = document.getElementById("nam").value
+            let age = document.getElementById("age").value
+            let h = document.getElementById("h")
+            let date = new Date()
+            let year = date.getFullYear()
+            let birthday = 100-parseInt(age)
+            let total = parseInt(year)+parseInt(birthday)
+            h.innerHTML=`Your name is ${name1} and your 100th birthday will be in the year of ${total}`
+        }
+    </script>
+</body>
+</html>

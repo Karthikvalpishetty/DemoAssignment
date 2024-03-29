@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function hangman(word, maxGuesses) {
+    word = word.toUpperCase();
+
+    let guessedLetters = [];
+    let incorrectGuesses = 0;
+    let maskedWord = word.replace(/[A-Z]/g, '_');
+
+    while (incorrectGuesses < maxGuesses && maskedWord.includes('_')) 
+    {
+        console.log(`Word: ${maskedWord} | Incorrect Guesses: ${incorrectGuesses}`);
+        let guess = prompt('Guess a letter (A-Z):').toUpperCase();
+        if (guess.length == 1 && /^[A-Z]$/.test(guess)) 
+        {
+            if (word.includes(guess))
+            {
+            for (let i = 0; i < word.length; i++) 
+            {
+            if (word[i] == guess) 
+            {
+                maskedWord = maskedWord.substring(0, i) + guess + maskedWord.substring(i + 1);
+            }
+            }
+            } 
+            else 
+            {
+                incorrectGuesses++;
+            }
+                guessedLetters.push(guess);
+            } 
+            else 
+            {
+            console.log('Invalid guess. Please enter a single letter (A-Z).');
+            }
+        }
+
+        if (maskedWord == word) 
+        {
+            console.log(`Congratulations! You guessed the word "${word}" correctly.`);
+        } 
+        else 
+        {
+            console.log(`Game over! The word was "${word}". Better luck next time!`);
+        }
+        }
+
+        hangman('JavaScript',6);
+    </script>
+</body>
+</html>

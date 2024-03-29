@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter number of days:</h3>
+    <input type="text" id="days"><br>
+    <h3 id="h"></h3>
+    <button onclick="cal()">calculate</button>
+
+    <script>
+        let cal=()=>{
+            let days = document.getElementById("days").value
+            let seconds = days*24*60*60
+            let h3 = document.getElementById("h")
+            h3.innerHTML=`Number of seconds for given days are :${seconds}`
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter how many weeks needed to convert into min:</h3>
+    <input type="text" id="weeks"><br>
+    <h3 id="h"></h3>
+    <button onclick="cal()">calculate</button>
+    <script>
+        function cal()
+        {
+            let week = document.getElementById("weeks").value
+            let min = week*7*24*60
+            let h = document.getElementById("h")
+            h.innerHTML=`${min}`
+        }
+    </script>
+</body>
+</html>

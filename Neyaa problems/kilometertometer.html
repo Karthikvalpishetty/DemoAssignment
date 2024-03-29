@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter kilometers:</h3>
+    <input type="text" id="kilo">
+    <h3 id="h"></h3>
+    <button onclick="cal()">submit</button>
+    <script>
+        function cal()
+        {
+            let kilo = document.getElementById("kilo").value
+        let meter = kilo*1000
+        let h=document.getElementById("h")
+        h.innerHTML=`Meters = ${meter}`
+        }
+    </script>
+</body>
+</html>

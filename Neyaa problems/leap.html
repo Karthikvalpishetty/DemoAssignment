@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter the year:</h3>
+    <input type="text" id="year">
+    <h3 id="h"></h3>
+    <button onclick="cal()">calculate</button>
+    <script>
+        function cal()
+        {
+            let year = document.getElementById("year").value
+        let h = document.getElementById("h")
+        if(year%4==0 && year%400!=0)
+        {
+            h.innerHTML=`Given year is a leap year`
+        }
+        else{
+            h.innerHTML=`Given year is not a leap year`
+        }
+        }
+    </script>
+</body>
+</html>

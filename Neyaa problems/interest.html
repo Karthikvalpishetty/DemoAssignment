@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter your loan amount:</h3>
+    <input type="text" name="" id="loan">
+    <h3>Enter your rate of interest:</h3>
+    <input type="text" name="" id="rate">
+    <h3>Enter your rate of Time period in years:</h3>
+    <input type="text" name="" id="time">
+    <h3 id="total"></h3>
+    <button onclick="calculate()">Calculate</button>
+    <script>
+       function calculate()
+       {
+        let loan = document.getElementById("loan").value
+        let rate = document.getElementById("rate").value
+        let time = document.getElementById("time").value
+        let total1 = document.getElementById("total")
+        let rateof = (loan/100)*rate
+        let interest = time*rateof
+        let total = parseInt(loan)+parseInt(interest)
+        total1.innerHTML=`Your total interest amount is: ${total}`
+       }
+    </script>
+</body>
+</html>

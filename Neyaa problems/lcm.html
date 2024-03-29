@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter a number:</h3>
+    <input type="text" name="" id="num1">
+    <h3>Enter b number:</h3>
+    <input type="text" name="" id="num2">
+    <h3 id="h"></h3>
+    <button onclick="cal()">submit</button>
+    <script>
+        function cal()
+        {
+            let num1= document.getElementById("num1").value
+            let num2= document.getElementById("num2").value
+            let h= document.getElementById("h")
+            let lcm = (num1*num2)/gcd(num1,num2)
+
+            h.innerHTML=`${lcm}`
+             
+        }
+        function gcd(num1,num2)
+        {
+            while(num2!==0)
+            {
+                let temp = num2
+                num2 = num1 % num2
+                num1 = temp
+            }
+            return num1
+        }
+    </script>
+</body>
+</html>

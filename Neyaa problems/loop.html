@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter your name:</h3>
+    <input type="text" name="" id="name1">
+    <h3 id="c"></h3>
+    <h3 id="a"></h3>
+    <h3 id="b"></h3>
+    <h3 id="d"></h3>
+    <h3 id="e"></h3>
+    <h3 id="f"></h3>
+    <h3 id="g"></h3>
+    <h3 id="h"></h3>
+    <h3 id="i"></h3>
+    <h3 id="j"></h3>
+    <button onclick="karthik()">Submit</button>
+<ul>
+    <li id="k"></li>
+</ul>
+    
+    <script>
+        function karthik()
+        {
+            let name = document.getElementById("name1").value
+            let nam = document.getElementById("c")
+            let nam1 = document.getElementById("a")
+            let nam2 = document.getElementById("b")
+            let nam3 = document.getElementById("d")
+            let nam4 = document.getElementById("e")
+            let nam5 = document.getElementById("f")
+            let nam6 = document.getElementById("g")
+            let nam7 = document.getElementById("h")
+            let nam8 = document.getElementById("i")
+            let nam9 = document.getElementById("j")
+            let nam10 = document.getElementById("k")
+            for(let i=1;i<=10;i++)
+            {
+                nam.innerHTML = `${name}`
+                nam1.innerHTML = `${name}`
+                nam2.innerHTML = `${name}`
+                nam3.innerHTML = `${name}`
+                nam4.innerHTML = `${name}`
+                nam5.innerHTML = `${name}`
+                nam6.innerHTML = `${name}`
+                nam7.innerHTML = `${name}`
+                nam8.innerHTML = `${name}`
+                nam9.innerHTML = `${name}`
+                console.log(name)
+                nam10.innerHTML=`${name}`
+            }
+        }
+    </script>
+</body>
+</html>

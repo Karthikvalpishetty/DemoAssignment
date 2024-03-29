@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <h1 id="h"></h1>
+    <!-- <br><br>
+    <button onclick="calculate()">calculate</button> -->
+</head>
+<body>
+    <script>
+
+        
+        let length = parseInt(prompt("enter length value"))
+        let breadth = parseInt(prompt("enter breadth value"))
+        let rect=length*breadth
+        console.log(rect)
+        let h1 = document.getElementById("h")
+        h1.innerHTML=`area of rectangle is :${rect}`
+        
+    </script>
+</body>
+</html>

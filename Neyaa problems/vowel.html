@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3>Enter any alphabet:</h3>
+<input type="text" id="a">
+<h3 id="h"></h3>
+<button onclick="vow()">submit</button>
+
+    <script>
+        function vow()
+        {
+            let key = document.getElementById("a").value
+            let h = document.getElementById("h")
+            switch (key) 
+            {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':{
+                console.log("given element is vowel")
+                h.innerHTML="given element is vowel"
+                break;
+                    }
+                
+            case '1' :
+            case '2' :
+            case '3' :
+            case '4' :
+            case '5' :
+            case '6' :
+            case '7' :
+            case '8' :
+            case '9' :
+            case '0' :{
+                h.innerHTML="given element is number"
+                break;
+            }
+                
+        
+            default:
+                console.log("given element is consonant")
+                h.innerHTML="given element is consonant"
+                break;
+        }
+        }
+    </script>
+</body>
+</html>
